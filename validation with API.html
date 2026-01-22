@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>
+        Validation using API
+    </title>
+</head>
+
+<body>
+    <input id="id" type="number" min="100" max="300" required>
+    <button onclick="myFunction()">OK</button> </body>
+<p>If the number inputted is less than 100 or greater than 300, an error will be displayed</p>
+<p id="results"></p>
+
+<script>
+    function myFunction() {
+        var inprobj = document.getElementById("id");
+
+        if (!inprobj.checkValidity()) {
+            document.getElementById("results").innerHTML = inprobj.validationMessage;
+        } else {
+            document.getElementById("results").innerHTML = "Input OK";
+        }
+    }
+</script>
+
+</html>
